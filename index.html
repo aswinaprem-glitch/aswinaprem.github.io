@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- SEO -->
+  <!-- SEO & Verification -->
   <meta name="google-site-verification" content="_J8vZyJs7AhWX8-GY0mANcaJ5gwPfAxyuX3itnVo-Jg" />
   <meta name="description" content="Aswin - Videographer & Video Editor | Motorcycle Adventures | Cinematic Storytelling">
   <meta name="keywords" content="Aswin, Aswin Aprem, videographer, video editor, Kerala, motorcycle travel, content creator">
@@ -18,7 +18,11 @@
       --light: #e2e8f0;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Segoe UI', system-ui, sans-serif;
@@ -28,6 +32,7 @@
       overflow-x: hidden;
     }
 
+    /* Header */
     header {
       background: rgba(10, 15, 28, 0.95);
       position: fixed;
@@ -46,21 +51,22 @@
     }
 
     .logo {
-      font-size: 2.1rem;
+      font-size: 2.2rem;
       font-weight: bold;
       background: linear-gradient(90deg, var(--primary), var(--accent));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
+    /* Hero */
     .hero {
       height: 100vh;
       display: flex;
       align-items: center;
       text-align: center;
       position: relative;
-      background: linear-gradient(rgba(10,15,28,0.8), rgba(10,15,28,0.85)),
-                  url('https://source.unsplash.com/random/1920x1080/?motorcycle,night,adventure') no-repeat center center/cover;
+      background: linear-gradient(rgba(10,15,28,0.75), rgba(10,15,28,0.85)),
+                  url('https://source.unsplash.com/random/1920x1080/?motorcycle,night,cinematic') no-repeat center center/cover;
     }
 
     .hero-content {
@@ -71,8 +77,24 @@
       padding: 0 20px;
     }
 
-    .hero h1 { font-size: 4.5rem; margin-bottom: 1rem; animation: fadeInUp 1s ease; }
-    .tagline { font-size: 2rem; margin-bottom: 2rem; color: var(--primary); animation: fadeInUp 1.3s ease; font-weight: 300; }
+    .hero h1 {
+      font-size: 4.6rem;
+      margin-bottom: 1rem;
+      animation: fadeInUp 1s ease;
+    }
+
+    .tagline {
+      font-size: 2.1rem;
+      margin-bottom: 2rem;
+      color: var(--primary);
+      animation: fadeInUp 1.3s ease;
+      font-weight: 300;
+    }
+
+    .highlight {
+      color: var(--accent);
+      font-weight: bold;
+    }
 
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(40px); }
@@ -95,9 +117,10 @@
 
     .btn:hover {
       transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 15px 40px rgba(0, 245, 255, 0.45);
     }
 
-    section { padding: 100px 5%; }
+    section { padding: 110px 5% 80px; }
 
     h2 {
       font-size: 3rem;
@@ -108,7 +131,10 @@
       -webkit-text-fill-color: transparent;
     }
 
-    .container { max-width: 1200px; margin: 0 auto; }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
     .card {
       background: rgba(255,255,255,0.06);
@@ -128,23 +154,23 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
-      margin-top: 2rem;
+      margin-top: 2.5rem;
     }
 
     .portfolio-item {
       border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-      transition: transform 0.3s;
+      transition: all 0.4s;
     }
 
     .portfolio-item:hover {
-      transform: scale(1.05);
+      transform: scale(1.04);
     }
 
     .portfolio-item img {
       width: 100%;
-      height: 100%;
+      height: 220px;
       object-fit: cover;
       display: block;
     }
@@ -154,6 +180,14 @@
       padding: 3rem;
       background: #05070f;
       font-size: 1.1rem;
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 3.5rem; }
+      .tagline { font-size: 1.7rem; }
+      nav { padding: 1rem 5%; }
+      section { padding: 80px 5% 60px; }
     }
   </style>
 </head>
@@ -177,40 +211,118 @@
   <section class="hero">
     <div class="hero-content">
       <h1>Hey, I'm <span class="highlight">Aswin</span></h1>
-      <p class="tagline">Capturing moments • Editing stories • Chasing horizons on two wheels</p>
+      <p class="tagline">
+        Capturing moments • Editing stories •<br>
+        Chasing horizons on two wheels
+      </p>
+      <p style="font-size:1.4rem; margin: 1.5rem 0 2.5rem; opacity:0.9;">
+        Videographer | Video Editor | Creative Explorer
+      </p>
       <a href="#work" class="btn">Watch My Work</a>
       <a href="#contact" class="btn">Let's Create Together</a>
     </div>
   </section>
 
-  <!-- Work / Portfolio -->
-  <section id="work" style="background:#111827;">
-    <div class="container" style="text-align:center;">
-      <h2>My Creative Universe</h2>
-      <p style="font-size:1.4rem; margin:2rem 0;">Selected Videography & Photography Works</p>
-      
-      <div class="portfolio-grid">
-        <!-- Add more images here as needed -->
-        <div class="portfolio-item">
-          <img src="https://drive.google.com/thumbnail?id=PUT_YOUR_FILE_ID_HERE&sz=w800" alt="Work 1">
-        </div>
-        <div class="portfolio-item">
-          <img src="https://drive.google.com/thumbnail?id=PUT_YOUR_FILE_ID_HERE&sz=w800" alt="Work 2">
-        </div>
-        <!-- Repeat for more images -->
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="card">
+        <h2>About Me</h2>
+        <p style="font-size:1.25rem; text-align:center; max-width:800px; margin:0 auto;">
+          19-year-old BCA student with a restless mind and creative hands. 
+          I turn ideas into visuals, ride solo into the unknown, and believe every journey deserves a good story.
+          My dream? To travel the world on my bike, camera in hand.
+        </p>
       </div>
-
-      <br><br>
-      <a href="https://www.instagram.com/aswin__aprem/" target="_blank" class="btn">View All on Instagram → @aswin__aprem</a>
     </div>
   </section>
 
-  <!-- Other sections remain the same (About, Education, Skills, Contact) -->
-  <!-- ... (I kept them short here to save space) ... -->
+  <!-- Education -->
+  <section id="education" style="background:#111827;">
+    <div class="container">
+      <h2>Education Journey</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>BCA • 2nd Year</h3>
+          <p><strong>Amal Jyothi College of Engineering</strong><br>2024 – Present</p>
+        </div>
+        <div class="card">
+          <h3>Commerce</h3>
+          <p><strong>AMHSS Kalaketty</strong><br>Completed</p>
+        </div>
+        <div class="card">
+          <h3>Schooling (Till 10th)</h3>
+          <p><strong>AKJM HSS Kanjirappally</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work / Portfolio -->
+  <section id="work">
+    <div class="container" style="text-align:center;">
+      <h2>My Creative Universe</h2>
+      <p style="font-size:1.4rem; margin:2rem 0 3rem;">Videography & Photography Works</p>
+      
+      <div class="portfolio-grid">
+        <!-- Paste your image links here -->
+        <div class="portfolio-item">
+          <img src="https://drive.google.com/thumbnail?id=1YOUR_FILE_ID_HERE&sz=w800" alt="Project 1">
+        </div>
+        <!-- Add more portfolio items like above -->
+      </div>
+
+      <br><br>
+      <a href="https://www.instagram.com/aswin__aprem/" target="_blank" class="btn">View More on Instagram → @aswin__aprem</a>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" style="background:#111827;">
+    <div class="container">
+      <h2>Skills & Passions</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Creative Arsenal</h3>
+          <ul style="font-size:1.2rem; line-height:2.2;">
+            <li>Videography & Cinematic Editing</li>
+            <li>Script Writing & Storytelling</li>
+            <li>Content Creation</li>
+            <li>Drawing & Crafting</li>
+            <li>Music Instruments</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Superpowers</h3>
+          <ul style="font-size:1.2rem; line-height:2.2;">
+            <li>Problem Solving</li>
+            <li>Leadership</li>
+            <li>Solo Riding & Adventure</li>
+            <li>Fast Learning</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container" style="max-width:800px; text-align:center;">
+      <div class="card">
+        <h2>Let's Connect</h2>
+        <p style="font-size:1.4rem; margin:2.5rem 0;">
+          📧 aswinaprem2@gmail.com<br><br>
+          📱 +91 6235446883
+        </p>
+        <p style="margin-top:2rem; font-size:1.3rem;">Follow my journeys</p>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <p>Made with passion • Aswin © 2026</p>
     <p>Dream Big. Ride Far. Create Wildly.</p>
   </footer>
+
 </body>
 </html>
